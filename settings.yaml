@@ -1,0 +1,23 @@
+---
+
+vm:
+  box_image: bento/ubuntu-22.04
+  ip_prefix: 10.0.0.
+  ip_start: 100
+  master:
+    cpu: 2
+    memory: 4096
+  workers:
+    count: 2
+    cpu: 2
+    memory: 4096
+
+kubernetes:
+  cluster_name: local-k8s 
+  version: 1.22.13-00
+  pod_cidr: 172.12.1.0/16
+  service_cidr: 172.26.1.0/16
+
+components:
+  docker_engine: 20.10
+  calico: 3.26.0
